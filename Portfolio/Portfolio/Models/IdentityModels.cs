@@ -29,5 +29,10 @@ namespace Portfolio.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

@@ -95,3 +95,5 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.CoreCom
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.CopyComplete
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.pdb
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.initialDb.resources
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.GenerateResource.cache
