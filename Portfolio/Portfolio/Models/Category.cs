@@ -10,7 +10,7 @@ namespace Portfolio.Models
     public class Category
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]
@@ -22,5 +22,7 @@ namespace Portfolio.Models
         [Display(Name = "Type")]
         [StringLength(255, MinimumLength = 2)]
         public string Type { get; set; }
+
+        public virtual ICollection<Project> Projects { get; set; }
     }
 }

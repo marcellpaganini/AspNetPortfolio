@@ -11,7 +11,7 @@ namespace Portfolio.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int UserId { get; set; }
+        public int AuthorId { get; set; }
 
         [Required(ErrorMessage = "First name is required")]
         [Display(Name = "First Name")]
@@ -22,5 +22,7 @@ namespace Portfolio.Models
         [Display(Name = "Last Name")]
         [StringLength(100, MinimumLength = 2)]
         public string LastName { get; set; }
+
+        public virtual List<Project> Projects { get; set; }
     }
 }

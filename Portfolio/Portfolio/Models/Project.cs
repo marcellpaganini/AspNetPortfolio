@@ -34,5 +34,13 @@ namespace Portfolio.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Updated { get; set; }
+
+        public int AuthorId { get; set; }
+
+        public virtual Author Author { get; set; }
+
+        public virtual List<Image> Images { get; set; }
+
+        public virtual ICollection<Category> Categories { get; set; }
     }
 }

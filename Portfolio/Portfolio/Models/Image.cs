@@ -17,5 +17,9 @@ namespace Portfolio.Models
         [Display(Name = "Image Name")]
         [StringLength(255, MinimumLength = 2)]
         public string ImageName { get; set; }
+
+        public int ProjectId { get; set; }
+
+        public virtual Project Project { get; set; }
     }
 }
