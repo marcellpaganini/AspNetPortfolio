@@ -10,7 +10,7 @@ namespace Portfolio.Models
     public class Author
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int AuthorId { get; set; }
 
         [Required(ErrorMessage = "First name is required")]

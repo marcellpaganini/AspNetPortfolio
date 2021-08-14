@@ -10,7 +10,7 @@ namespace Portfolio.Models
     public class Image
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ImageId { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]

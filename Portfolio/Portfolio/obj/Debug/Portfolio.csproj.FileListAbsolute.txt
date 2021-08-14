@@ -99,3 +99,4 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.ini
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.GenerateResource.cache
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.dbRelations.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.identity.resources
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.autoIncrement.resources

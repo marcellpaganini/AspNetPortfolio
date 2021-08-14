@@ -16,14 +16,6 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.ProjectId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ProjectId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ProjectId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.ProjectTitle, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProjectTitle, new { htmlAttributes = new { @class = "form-control" } })
@@ -34,7 +26,24 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProjectDescription, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ProjectDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.ProjectDescription, new {
+               @value = "Enter Name",
+               @class = "red",
+               //@disabled="true",
+               cols = "50",
+               rows = "10",
+               @title = "Please Enter Your Name",
+               @tabindex = "0",
+               //@accesskey="z",
+               @align = "left",
+               @autofocus = "true",
+               @style = "font-weight:bold;width: 100%; border: 1px solid #ccc; border-radius: 4px;box-sizing: border-box; margin-top: 6px; margin-bottom: 10px;",
+               @draggable = "false",
+                //@hidden="true",
+                //@maxlength="12",
+               @minlength = "5",
+               @required = "true"
+            })
                 @Html.ValidationMessageFor(model => model.ProjectDescription, "", new { @class = "text-danger" })
             </div>
         </div>

@@ -10,7 +10,7 @@ namespace Portfolio.Models
     public class Project
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProjectId { get; set; }
 
         [Required(ErrorMessage = "Title is required.")]
@@ -35,6 +35,7 @@ namespace Portfolio.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Updated { get; set; }
 
+        [Display(Name = "Author")]
         public int AuthorId { get; set; }
 
         public virtual Author Author { get; set; }
