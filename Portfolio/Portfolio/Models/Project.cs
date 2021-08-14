@@ -40,7 +40,7 @@ namespace Portfolio.Models
 
         public virtual Author Author { get; set; }
 
-        public virtual List<Image> Images { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
 
         public virtual ICollection<Category> Categories { get; set; }
     }

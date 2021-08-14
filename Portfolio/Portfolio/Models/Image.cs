@@ -18,6 +18,10 @@ namespace Portfolio.Models
         [StringLength(255, MinimumLength = 2)]
         public string ImageName { get; set; }
 
+        public string ContentType { get; set; }
+
+        public byte[] Content { get; set; }
+
         public int ProjectId { get; set; }
 
         public virtual Project Project { get; set; }
