@@ -18,9 +18,17 @@ namespace Portfolio.Models
         [StringLength(255, MinimumLength = 2)]
         public string ImageName { get; set; }
 
-        public string ContentType { get; set; }
+        [Required]
+        [StringLength(150)]
+        public string FilePath { get; set; }
 
-        public byte[] Content { get; set; }
+        [Required(ErrorMessage = "Please enter date and time")]
+        [Display(Name = "Date/Time")]
+        public DateTime UploadDateTime { get; set; }
+
+        //public string ContentType { get; set; }
+
+        //public byte[] Content { get; set; }
 
         public int ProjectId { get; set; }
 

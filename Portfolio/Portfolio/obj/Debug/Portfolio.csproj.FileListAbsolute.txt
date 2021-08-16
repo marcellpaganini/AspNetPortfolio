@@ -101,3 +101,5 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.dbR
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.identity.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.autoIncrement.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.imageUpload.resources
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.moreImageFields.resources
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.Imagev3.resources
