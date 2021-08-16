@@ -69,10 +69,11 @@ namespace Portfolio.Controllers
                             //if file size is ok....
 
                             string fileName = Path.GetFileName(upload.FileName);
-                            string filePath = Path.Combine(Server.MapPath("~/Images"), fileName);
-                            //string filePath = Server.MapPath("~/Content/images/" + fileName);
+                        string filePath = Server.MapPath("~/Images/" + fileName);
+                        string relativePath = Path.Combine("~/Images", fileName);
+                        //string filePath = Server.MapPath("~/Content/images/" + fileName);
 
-                            //start image tye validation - only these images allowed
+                        //start image tye validation - only these images allowed
                         System.Drawing.Image img =
                                         System.Drawing.Image.FromStream(upload.InputStream);
 
@@ -109,7 +110,7 @@ namespace Portfolio.Controllers
                             //end
 
                             image.ImageName = fileName;
-                            image.FilePath = filePath;
+                            image.FilePath = relativePath;
                             image.UploadDateTime = DateTime.Now;
                             db.Images.Add(image);
                             db.SaveChanges();
