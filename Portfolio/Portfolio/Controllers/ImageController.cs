@@ -187,6 +187,11 @@ namespace Portfolio.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Image image = db.Images.Find(id);
+
+            string sourceFile = Server.MapPath("~/Images/" + image.ImageName);
+            string destFile = Server.MapPath("~/Images/Delete/" + image.ImageName);
+            System.IO.File.Move(sourceFile, destFile);
+
             db.Images.Remove(image);
             db.SaveChanges();
             return RedirectToAction("Index");
