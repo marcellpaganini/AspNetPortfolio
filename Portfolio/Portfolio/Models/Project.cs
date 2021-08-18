@@ -42,6 +42,6 @@ namespace Portfolio.Models
 
         public virtual ICollection<Image> Images { get; set; }
 
-        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<CategoryProject> CategoryProjects { get; set; }
     }
 }

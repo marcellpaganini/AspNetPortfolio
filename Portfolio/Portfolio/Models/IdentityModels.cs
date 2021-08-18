@@ -34,5 +34,25 @@ namespace Portfolio.Models
         public DbSet<Project> Projects { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<CategoryProject> CategoryProjects { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>()
+                .HasKey(category => category.CategoryId);
+            modelBuilder.Entity<Project>()
+                .HasKey(project => project.ProjectId);
+            modelBuilder.Entity<CategoryProject>()
+                .HasKey(categoryProject => new { categoryProject.CategoryId, categoryProject.ProjectId });
+
+            modelBuilder.Entity<Category>()
+                .HasMany(category => category.CategoryProjects)
+                .WithRequired(categoryProjects => categoryProjects.Category)
+                .HasForeignKey(categoryProjects => categoryProjects.CategoryId);
+            modelBuilder.Entity<Project>()
+                .HasMany(project => project.CategoryProjects)
+                .WithRequired(categoryProjects => categoryProjects.Project)
+                .HasForeignKey(categoryProjects => categoryProjects.ProjectId);
+        }
     }
 }

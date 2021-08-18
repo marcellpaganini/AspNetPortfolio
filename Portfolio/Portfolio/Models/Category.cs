@@ -23,6 +23,6 @@ namespace Portfolio.Models
         [StringLength(255, MinimumLength = 2)]
         public string Type { get; set; }
 
-        public virtual ICollection<Project> Projects { get; set; }
+        public virtual ICollection<CategoryProject> CategoryProjects { get; set; }
     }
 }
