@@ -10,17 +10,20 @@ using Portfolio.Models;
 
 namespace Portfolio.Controllers
 {
+    [Authorize]
     public class ProjectsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Projects
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var projects = db.Projects.Include(p => p.Author);
             return View(projects.ToList());
         }
 
+        [AllowAnonymous]
         // GET: Projects/Details/5
         public ActionResult Details(int? id)
         {

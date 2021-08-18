@@ -12,6 +12,7 @@ using Portfolio.Models;
 
 namespace Portfolio.Controllers
 {
+    [Authorize]
     public class ImageController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

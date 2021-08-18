@@ -30,28 +30,38 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Author.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectTitle)
+    </td>
+    <td>
+        @Html.Raw(item.ProjectDescription)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProjectDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Updated)
+    </td>
+
+    @if (User.Identity.IsAuthenticated)
+    {
         <td>
-            @Html.DisplayFor(modelItem => item.Author.FirstName)
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })
         </td>
+    }
+    else
+    {
         <td>
-            @Html.DisplayFor(modelItem => item.ProjectTitle)
+            @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) 
         </td>
-        <td>
-            @Html.Raw(item.ProjectDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProjectDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Updated)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProjectId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectId })
-        </td>
-    </tr>
+    }
+</tr>
 }
 
 </table>

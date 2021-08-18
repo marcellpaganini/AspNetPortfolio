@@ -10,6 +10,7 @@ using Portfolio.Models;
 
 namespace Portfolio.Controllers
 {
+    [Authorize]
     public class AuthorsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
