@@ -7,6 +7,14 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <script src="~/Scripts/tinymce/tinymce.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',  // change this value according to your HTML
+            auto_focus: 'element1'
+        });
+    </script>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

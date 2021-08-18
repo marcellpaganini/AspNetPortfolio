@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Portfolio.Models
 {
@@ -21,6 +22,8 @@ namespace Portfolio.Models
         [Required(ErrorMessage = "Description is required.")]
         [Display(Name = "Description")]
         [StringLength(2000, MinimumLength = 100)]
+        [AllowHtml]
+        [DataType(DataType.MultilineText)]
         public string ProjectDescription { get; set; }
 
         [Required(ErrorMessage = "Project date is required.")]

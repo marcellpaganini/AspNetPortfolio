@@ -26,25 +26,24 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProjectDescription, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.ProjectDescription, new {
-               @value = "Enter Name",
-               @class = "red",
-               //@disabled="true",
-               cols = "50",
-               rows = "10",
-               @title = "Please Enter Your Name",
-               @tabindex = "0",
-               //@accesskey="z",
-               @align = "left",
-               @autofocus = "true",
-               @style = "width: 100%; border: 1px solid #ccc; border-radius: 4px;box-sizing: border-box; margin-top: 6px; margin-bottom: 10px;",
-               @draggable = "false",
-                //@hidden="true",
-                //@maxlength="12",
-               @minlength = "5",
-               @required = "true"
-            })
+                @Html.EditorFor(model => model.ProjectDescription, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProjectDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProjectDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProjectDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProjectDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Updated, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Updated, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Updated, "", new { @class = "text-danger" })
             </div>
         </div>
 

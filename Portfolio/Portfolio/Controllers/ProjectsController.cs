@@ -52,9 +52,6 @@ namespace Portfolio.Controllers
         {
             if (ModelState.IsValid)
             {
-                project.ProjectDate = DateTime.Now;
-                project.Updated = DateTime.Now;
-
                 db.Projects.Add(project);
                 db.SaveChanges();
                 return RedirectToAction("Index");
