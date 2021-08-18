@@ -199,33 +199,14 @@
     <Compile Include="Migrations\202108121700116_initialDb.designer.cs">
       <DependentUpon>202108121700116_initialDb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108122256510_dbRelations.cs" />
-    <Compile Include="Migrations\202108122256510_dbRelations.designer.cs">
-      <DependentUpon>202108122256510_dbRelations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108122305253_identity.cs" />
-    <Compile Include="Migrations\202108122305253_identity.designer.cs">
-      <DependentUpon>202108122305253_identity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108131243167_autoIncrement.cs" />
-    <Compile Include="Migrations\202108131243167_autoIncrement.Designer.cs">
-      <DependentUpon>202108131243167_autoIncrement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108141403235_imageUpload.cs" />
-    <Compile Include="Migrations\202108141403235_imageUpload.Designer.cs">
-      <DependentUpon>202108141403235_imageUpload.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108151222159_moreImageFields.cs" />
-    <Compile Include="Migrations\202108151222159_moreImageFields.Designer.cs">
-      <DependentUpon>202108151222159_moreImageFields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108160130014_Imagev3.cs" />
-    <Compile Include="Migrations\202108160130014_Imagev3.Designer.cs">
-      <DependentUpon>202108160130014_Imagev3.cs</DependentUpon>
+    <Compile Include="Migrations\202108181237223_customManyToMany.cs" />
+    <Compile Include="Migrations\202108181237223_customManyToMany.Designer.cs">
+      <DependentUpon>202108181237223_customManyToMany.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryProject.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -329,23 +310,8 @@
     <EmbeddedResource Include="Migrations\202108121700116_initialDb.resx">
       <DependentUpon>202108121700116_initialDb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108122256510_dbRelations.resx">
-      <DependentUpon>202108122256510_dbRelations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108122305253_identity.resx">
-      <DependentUpon>202108122305253_identity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108131243167_autoIncrement.resx">
-      <DependentUpon>202108131243167_autoIncrement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108141403235_imageUpload.resx">
-      <DependentUpon>202108141403235_imageUpload.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108151222159_moreImageFields.resx">
-      <DependentUpon>202108151222159_moreImageFields.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108160130014_Imagev3.resx">
-      <DependentUpon>202108160130014_Imagev3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108181237223_customManyToMany.resx">
+      <DependentUpon>202108181237223_customManyToMany.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

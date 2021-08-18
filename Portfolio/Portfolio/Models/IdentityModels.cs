@@ -38,6 +38,8 @@ namespace Portfolio.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Category>()
                 .HasKey(category => category.CategoryId);
             modelBuilder.Entity<Project>()
