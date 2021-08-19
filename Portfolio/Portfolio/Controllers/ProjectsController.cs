@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using Portfolio.Models;
 
 namespace Portfolio.Controllers
@@ -17,10 +18,65 @@ namespace Portfolio.Controllers
 
         // GET: Projects
         [AllowAnonymous]
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string CurrentSort, int? page)
         {
-            var projects = db.Projects.Include(p => p.Author);
-            return View(projects.ToList());
+            int pageSize = 10;
+            int pageIndex = 1;
+            pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
+            ViewBag.CurrentSort = sortOrder;
+            sortOrder = String.IsNullOrEmpty(sortOrder) ? "First Name" : sortOrder;
+            IPagedList<Project> projects = null;
+            switch (sortOrder)
+            {
+                case "First Name":
+                    if (sortOrder.Equals(CurrentSort))
+                        projects = db.Projects.OrderByDescending
+                                (m => m.Author.FirstName).ToPagedList(pageIndex, pageSize);
+                    else
+                        projects = db.Projects.OrderBy
+                                (m => m.Author.FirstName).ToPagedList(pageIndex, pageSize);
+                    break;
+                case "Title":
+                    if (sortOrder.Equals(CurrentSort))
+                        projects = db.Projects.OrderByDescending
+                                (m => m.ProjectTitle).ToPagedList(pageIndex, pageSize);
+                    else
+                        projects = db.Projects.OrderBy
+                                (m => m.ProjectTitle).ToPagedList(pageIndex, pageSize);
+                    break;
+                case "Description":
+                    if (sortOrder.Equals(CurrentSort))
+                        projects = db.Projects.OrderByDescending
+                                (m => m.ProjectDescription).ToPagedList(pageIndex, pageSize);
+                    else
+                        projects = db.Projects.OrderBy
+                                (m => m.ProjectDescription).ToPagedList(pageIndex, pageSize);
+                    break;
+                case "Project Date":
+                    if (sortOrder.Equals(CurrentSort))
+                        projects = db.Projects.OrderByDescending
+                                (m => m.ProjectDate).ToPagedList(pageIndex, pageSize);
+                    else
+                        projects = db.Projects.OrderBy
+                                (m => m.ProjectDate).ToPagedList(pageIndex, pageSize);
+                    break;
+                case "Last Updated":
+                    if (sortOrder.Equals(CurrentSort))
+                        projects = db.Projects.OrderByDescending
+                                (m => m.Updated).ToPagedList(pageIndex, pageSize);
+                    else
+                        projects = db.Projects.OrderBy
+                                (m => m.Updated).ToPagedList(pageIndex, pageSize);
+                    break;
+                case "Default":
+                    projects = db.Projects.OrderBy
+                        (m => m.Author.FirstName).ToPagedList(pageIndex, pageSize);
+                    break;
+            }
+            return View(projects);
+
+            //var projects = db.Projects.Include(p => p.Author);
+            //return View(projects.ToList());
         }
 
         [AllowAnonymous]
@@ -55,6 +111,7 @@ namespace Portfolio.Controllers
         {
             if (ModelState.IsValid)
             {
+                project.ProjectId = Convert.ToInt32(Guid.NewGuid());
                 db.Projects.Add(project);
                 db.SaveChanges();
                 return RedirectToAction("Index");

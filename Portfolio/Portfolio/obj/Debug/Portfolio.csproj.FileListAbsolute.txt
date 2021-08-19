@@ -49,6 +49,8 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.Owin.Security.Twitte
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.Web.Infrastructure.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Newtonsoft.Json.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Owin.dll
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\PagedList.dll
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\PagedList.Mvc.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\System.Buffers.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\System.Diagnostics.DiagnosticSource.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\System.Memory.dll
@@ -74,6 +76,8 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.Owin.Security.Micros
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.Owin.Security.OAuth.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.Owin.Security.Twitter.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Newtonsoft.Json.xml
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\PagedList.xml
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\PagedList.Mvc.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\System.Buffers.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\System.Diagnostics.DiagnosticSource.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\System.Memory.xml
@@ -90,6 +94,7 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Antlr3.Runtime.pdb
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.AspNet.Identity.Core.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csprojAssemblyReference.cache
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.initialDb.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.customManyToMany.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.GenerateResource.cache
@@ -97,4 +102,3 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.CoreCom
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.CopyComplete
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.pdb
-C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csprojAssemblyReference.cache
