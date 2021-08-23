@@ -94,7 +94,6 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Antlr3.Runtime.pdb
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.AspNet.Identity.Core.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csprojAssemblyReference.cache
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.initialDb.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.Migrations.customManyToMany.resources
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.GenerateResource.cache
@@ -102,3 +101,4 @@ C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.CoreCom
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csproj.CopyComplete
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.dll
 C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.pdb
+C:\src\c#\AspNetPortfolio\Portfolio\Portfolio\obj\Debug\Portfolio.csprojAssemblyReference.cache
