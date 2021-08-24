@@ -62,8 +62,7 @@
     @if (User.Identity.IsAuthenticated)
     {
     <div class="navbar navbar-inverse navbar-fixed-left">
-        <a class="navbar-brand" href="#">LOGO</a>
-        <img src="~/Images/profile.png" class="img-responsive avatar" alt=""/>
+        <img src="~/Images/profile.png" class="img-responsive avatar" alt="" />
         <ul class="nav navbar-nav">
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
             <li>@Html.ActionLink("Authors", "Index", "Authors")</li>
@@ -72,8 +71,8 @@
             <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
             <li>@Html.ActionLink("About", "About", "Home")</li>
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-            @Html.Partial("_LoginPartial")
         </ul>
+        @Html.Partial("_LoginPartial")
     </div>
         <!--end navigation-->
     }
@@ -86,8 +85,9 @@
         <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
         <li>@Html.ActionLink("About", "About", "Home")</li>
         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-        @Html.Partial("_LoginPartial")
     </ul>
+    @Html.Partial("_LoginPartial")
+
 </div>
     }
     <div class="container body-content">
