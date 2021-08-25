@@ -54,6 +54,32 @@
             border: 5px solid #555;
             margin: 0 auto;
         }
+
+        @@media (min-width: 768.5px) {
+            #icon {
+                display: none;
+            }
+        }
+            
+
+            @@media (max-width: 768px) {
+                .navbar-fixed-left {
+                    width: 80px;
+                    position: fixed;
+                    border-radius: 0;
+                    height: 100%;
+                    margin: auto;
+                    padding: 5px;
+                }
+
+                #avatar {
+                    display: none;
+                }
+
+                .link {
+                    display: none;
+                }
+            }
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -62,33 +88,102 @@
     @if (User.Identity.IsAuthenticated)
     {
     <div class="navbar navbar-inverse navbar-fixed-left">
-        <img src="~/Images/profile.png" class="img-responsive avatar" alt="" />
-        <ul class="nav navbar-nav">
-            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-            <li>@Html.ActionLink("Authors", "Index", "Authors")</li>
-            <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
-            <li>@Html.ActionLink("Images", "Index", "Image")</li>
-            <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
-            <li>@Html.ActionLink("About", "About", "Home")</li>
-            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-        </ul>
-        @Html.Partial("_LoginPartial")
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <img src="~/Images/profile.png" class="img-responsive avatar" alt="" id="avatar"/>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">
+                            <i class="fa fa-home fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>Home</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Authors")">
+                            <i class="fa fa-user fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>Authors</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Projects")">
+                            <i class="fa fa-newspaper-o fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>Projects</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Image")">
+                            <i class="fa fa-picture-o fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>Images</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Categories")">
+                            <i class="fa fa-cubes fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>Categories</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("About", "Home")">
+                            <i class="fa fa-info-circle fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>About</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contact", "Home")">
+                            <i class="fa fa-envelope fa-2x" id="icon"></i>
+                            <span class="link">
+                                <strong>Contact</strong>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
     </div>
-        <!--end navigation-->
     }
     else
     {
-<div class="navbar navbar-inverse navbar-fixed-left">
-    <img src="~/Images/profile.png" class="img-responsive avatar" alt="" />
-    <ul class="nav navbar-nav">
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-    @Html.Partial("_LoginPartial")
-
-</div>
+    <div class="navbar navbar-inverse navbar-fixed-left">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <img src="~/Images/profile.png" class="img-responsive avatar" alt="" id="avatar"/>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div> 
+        </div>
+    </div>
     }
     <div class="container body-content">
         @RenderBody()
