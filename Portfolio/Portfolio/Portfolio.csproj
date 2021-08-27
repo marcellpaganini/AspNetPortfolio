@@ -243,6 +243,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Images\backGround.jpg" />
     <Content Include="Images\profile.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
